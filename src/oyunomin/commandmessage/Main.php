@@ -18,8 +18,8 @@ class Main extends PluginBase implements Listener {
                 $sender -> sendMessage('ゲーム内で実行してください'); //コマンドを打った人に"ゲーム内で実行してください"と送るよ。
                 return true; //trueを返して処理終了だよ。これをしないとエラーを吐くよ
             }
-            $sender ->getName(); //送信者の名前を取得するよ
-            $sender->getPlayer(); //プレイヤーを取得するよ
+            $player = $sender ->getPlayer(); //プレイヤーを取得するよ
+            $name = $player ->getName(); //送信者の名前を取得するよ
             $sender -> sendMessage("こんにちは".$sender."さん");//送り主に"こんにちは、(player名)さん"と送るよ。
             return true; //trueを返して処理終了だよ。これをしないとエラーを吐くよ
         }
