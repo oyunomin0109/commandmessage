@@ -1,5 +1,5 @@
-name: helloworld #ここにはpluginの名前を書くよ
-main: oyunomin\helloworld\Main #ここにはプラグインのパスを書くよ(src\からだよ)
+name: commandmessage #ここにはpluginの名前を書くよ
+main: oyunomin\commandmessage\Main #ここにはプラグインのパスを書くよ(src\からだよ)
 version: 1.0.0 #プラグインのバージョン
 api: 3.0.0 #プラグインのAPI、この場合はAPI3.X.Xのソフトウェアなら読み込まれるよ
 load: POSTWORLD ##ワールドが読み込んだ後にこれを読み込むよ。サーバー起動直後に読み込むときはSTARTUPと書くよ。
