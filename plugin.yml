@@ -5,6 +5,6 @@ api: 3.0.0 #プラグインのAPI、この場合はAPI3.X.Xのソフトウェア
 load: POSTWORLD ##ワールドが読み込んだ後にこれを読み込むよ。サーバー起動直後に読み込むときはSTARTUPと書くよ。
 author: oyunomin #作者の名前を書くよ
 commands: #コマンドの登録だよ
-  hello: #コマンド名だよ
+  message: #コマンド名だよ
     description: helloと送信します。 #コマンド打った時に出てくる説明だよ
     permission: true #権限設定だよ。true -> 全員,false -> 誰も使えない,op -> opのみ,notop -> opだけ使えない
