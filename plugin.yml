@@ -1,0 +1,8 @@
+
+name: helloworld #plugin名
+main: oyunomin\helloworld\Main #メインのフォルダー
+version: 1.0.0 #プラグインのバージョン
+api: 3.0.0 #プラグインのAPI
+load: POSTWORLD #ロードするやつ
+author: oyunomin #作者
+description: hello world plugin #プラグインの説明
