@@ -13,16 +13,15 @@ class Main extends PluginBase implements Listener {
     }
     //$senderにはコマンドを打った人、$commandにはcommand,$labelにはコマンドの/?の?の部分、$argsには/? a bのaとbの部分が配列としてはいるよ。$args[0]にはa、$args[1]にはbが入るよ。
     public function onCommand(CommandSender $sender,Command $command,string $label,array $args):bool {
-        if($label === 'message') { //$labelがhelloか判断するよ
-            if(!$sender instanceOf Player) { //$sender(コマンドを打った人)がプレイヤーかどうかを判断するよ。!付けた場合はプレイヤーではないってことになるよ
-                $sender -> sendMessage('ゲーム内で実行してください'); //コマンドを打った人に"ゲーム内で実行してください"と送るよ。
-                return true; //trueを返して処理終了だよ。これをしないとエラーを吐くよ
-            }
-            $player = $sender ->getPlayer(); //プレイヤーを取得するよ
-            $name = $player ->getName(); //送信者の名前を取得するよ
-            $sender -> sendMessage("こんにちは".$sender."さん");//送り主に"こんにちは、(player名)さん"と送るよ。
+        if(!$sender instanceOf Player) { //$sender(コマンドを打った人)がプレイヤーかどうかを判断するよ。!付けた場合はプレイヤーではないってことになるよ
+            $sender -> sendMessage('ゲーム内で実行してください'); //コマンドを打った人に"ゲーム内で実行してください"と送るよ。
             return true; //trueを返して処理終了だよ。これをしないとエラーを吐くよ
         }
-        return false; //falseを返して処理終了だよ。これがないとエラーを吐くよ
+        $player = $sender ->getPlayer(); //プレイヤーを取得するよ
+        $name = $player ->getName(); //送信者の名前を取得する
+        $sender -> sendMessage("こんにちは".$sender."さん");//送り主に"こんにちは、(player名)さん"と送るよ。
+        return true; //trueを返して処理終了だよ。これをしないとエラーを吐くよ
+        
+        //コマンドが一つの場合はif($label === "message")などは要りません。
     }
 }
